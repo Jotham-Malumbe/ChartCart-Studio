@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Turn your WhatsApp into a 24/7 order machine. Get a simple online shop where customers browse products and send orders directly to your WhatsApp.">
+    <title>ChartCart Studio • WhatsApp Order Websites for Local Businesses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-screen-2xl mx-auto px-5 md:px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 md:w-10 md:h-10 bg-[#00c853] rounded-2xl flex items-center justify-center text-white text-2xl font-bold">🛒</div>
+                <h1 class="heading-font text-2xl md:text-3xl font-semibold tracking-tighter text-slate-900">ChartCart Studio</h1>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#how" class="hover:text-[#00c853] transition-colors">How it Works</a>
+                <a href="#demo" class="hover:text-[#00c853] transition-colors">Live Demo</a>
+                <a href="#for" class="hover:text-[#00c853] transition-colors">Who It's For</a>
+                <a href="#pricing" class="hover:text-[#00c853] transition-colors">Pricing</a>
+                <a href="#faq" class="hover:text-[#00c853] transition-colors">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-3 md:gap-4">
+                <a href="https://wa.me/254115652612?text=Hi%20ChartCart%20Studio%2C%20I%27d%20like%20to%20get%20my%20WhatsApp%20order%20website%20today!" 
+                   target="_blank"
+                   class="flex items-center gap-2 bg-[#00c853] text-white px-5 md:px-6 py-3 rounded-2xl font-semibold hover:bg-[#00b84a] transition-colors text-sm">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span class="hidden sm:inline">WhatsApp</span>
+                </a>
+                
+                <button onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })" 
+                        class="hidden md:block px-6 py-3 border border-slate-300 rounded-2xl font-semibold hover:bg-slate-100 transition-colors text-sm">
+                    Get your shop
+                </button>
+
+                <!-- Hamburger -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-slate-700 hover:text-[#00c853]">
+                    <i id="hamburgerIcon" class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-5 py-6 flex flex-col gap-5 text-base font-medium">
+            <a href="#how" onclick="toggleMobileMenu()" class="py-3 border-b border-slate-100 hover:text-[#00c853]">How it Works</a>
+            <a href="#demo" onclick="toggleMobileMenu()" class="py-3 border-b border-slate-100 hover:text-[#00c853]">Live Demo</a>
+            <a href="#for" onclick="toggleMobileMenu()" class="py-3 border-b border-slate-100 hover:text-[#00c853]">Who It's For</a>
+            <a href="#pricing" onclick="toggleMobileMenu()" class="py-3 border-b border-slate-100 hover:text-[#00c853]">Pricing</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="py-3 hover:text-[#00c853]">FAQ</a>
+            
+            <a href="https://wa.me/254115652612?text=Hi%20ChartCart%20Studio%2C%20I%27d%20like%20to%20get%20my%20WhatsApp%20order%20website%20today!" 
+               target="_blank"
+               class="mt-4 flex items-center justify-center gap-2 bg-[#00c853] text-white py-4 rounded-3xl font-semibold">
+                <i class="fab fa-whatsapp text-xl"></i>
+                Message us on WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-bg text-white py-16 md:py-24 lg:py-28">
+        <div class="max-w-screen-2xl mx-auto px-5 md:px-6">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white text-sm font-medium px-5 py-2 rounded-3xl border border-white/20">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00c853] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-[#00c853]"></span>
+                        </span>
+                        Serving Kenyan businesses
+                    </div>
+
+                    <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl leading-none font-semibold tracking-tighter">
+                        Turn your WhatsApp into a<br>24/7 order machine
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl lg:text-2xl text-slate-200 max-w-lg">
+                        Get a simple online shop where customers choose products and send orders directly to your WhatsApp. 
+                        No complicated apps. No technical skills needed.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#demo" 
+                           onclick="document.getElementById('demo').scrollIntoView({ behavior: 'smooth' })"
+                           class="flex items-center justify-center gap-3 bg-white text-slate-900 hover:bg-slate-100 px-8 py-5 rounded-3xl text-lg font-semibold transition-all">
+                            <i class="fas fa-play-circle"></i>
+                            Try live demo
+                        </a>
+                        
+                        <a href="https://wa.me/254115652612?text=Hi%20ChartCart%20Studio%2C%20I%27m%20ready%20to%20get%20my%20WhatsApp%20order%20website%20for%20my%20business!" 
+                           target="_blank"
+                           class="flex items-center justify-center gap-3 bg-[#00c853] hover:bg-[#00b84a] text-white px-8 py-5 rounded-3xl text-lg font-semibold transition-all">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                            Get your shop now
+                        </a>
+                    </div>
+
+                    <div>
+                        <p class="text-sm uppercase tracking-widest text-slate-300 mb-3">Perfect for</p>
+                        <div class="flex flex-wrap gap-x-6 gap-y-3 text-slate-100">
+                            <div class="flex items-center gap-2"><i class="fas fa-store"></i> Small shops</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-leaf"></i> Farmers</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-utensils"></i> Restaurants</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-truck"></i> Local sellers</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-hammer"></i> Artisans</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual - Fully Responsive -->
+                <div class="relative mt-10 md:mt-0">
+                    <div class="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-3xl p-3 shadow-2xl">
+                        <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
+                            <div class="bg-[#00c853] text-white px-5 md:px-6 py-4 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white rounded-2xl flex items-center justify-center text-[#00c853] text-2xl">🛒</div>
+                                    <div>
+                                        <p class="font-semibold text-sm md:text-base">Mama's Fresh Produce</p>
+                                        <p class="text-xs opacity-75">Open 24/7 • Orders via WhatsApp</p>
+                                    </div>
+                                </div>
+                                <div class="text-xs bg-white/20 px-3 py-1 rounded-2xl">Live now</div>
+                            </div>
+                            <div class="p-5 md:p-8">
+                                <div class="grid grid-cols-3 gap-3 md:gap-4 mb-8">
+                                    <div class="bg-slate-100 rounded-2xl p-4 text-center">
+                                        <div class="text-4xl mb-2">🥑</div>
+                                        <p class="font-medium text-xs">Avocados</p>
+                                        <p class="text-[#00c853] font-bold">KSh 80</p>
+                                    </div>
+                                    <div class="bg-slate-100 rounded-2xl p-4 text-center">
+                                        <div class="text-4xl mb-2">🥕</div>
+                                        <p class="font-medium text-xs">Carrots</p>
+                                        <p class="text-[#00c853] font-bold">KSh 50</p>
+                                    </div>
+                                    <div class="bg-slate-100 rounded-2xl p-4 text-center">
+                                        <div class="text-4xl mb-2">🍅</div>
+                                        <p class="font-medium text-xs">Tomatoes</p>
+                                        <p class="text-[#00c853] font-bold">KSh 60</p>
+                                    </div>
+                                </div>
+                                <button onclick="alert('In the real demo, customers add items and send order directly to WhatsApp!')" 
+                                        class="w-full bg-[#00c853] text-white py-4 rounded-3xl font-semibold flex items-center justify-center gap-2 text-base md:text-lg">
+                                    <i class="fas fa-cart-plus"></i>
+                                    Add to cart &amp; send to WhatsApp
+                                </button>
+                                <p class="text-center text-xs text-slate-500 mt-4">This is exactly what your customers will see</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating badge -->
+                    <div class="absolute -bottom-6 -right-3 md:-right-6 bg-white text-slate-900 px-5 py-3 rounded-3xl shadow-xl flex items-center gap-3">
+                        <i class="fab fa-whatsapp text-3xl md:text-4xl text-[#00c853]"></i>
+                        <div class="text-xs md:text-sm">
+                            <p class="font-semibold">Order received instantly</p>
+                            <p class="text-slate-500">Straight to your WhatsApp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PROBLEM + SOLUTION -->
+    <section class="max-w-screen-2xl mx-auto px-5 md:px-6 py-16 md:py-20 bg-white">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+            <div>
+                <span class="px-4 py-1.5 bg-red-100 text-red-700 text-sm font-medium rounded-3xl">The Problem</span>
+                <h2 class="section-header text-3xl md:text-4xl font-semibold mt-6 mb-8 leading-tight">
+                    Customers want to shop online,<br>but your orders are stuck in messy WhatsApp chats
+                </h2>
+                <div class="space-y-8">
+                    <div class="flex gap-5">
+                        <div class="w-8 h-8 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center flex-shrink-0 text-xl">📱</div>
+                        <div>
+                            <h4 class="font-semibold mb-1">Constant manual replies</h4>
+                            <p class="text-slate-600">Customers keep asking the same questions about products and prices.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="w-8 h-8 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center flex-shrink-0 text-xl">⏰</div>
+                        <div>
+                            <h4 class="font-semibold mb-1">Lost sales after hours</h4>
+                            <p class="text-slate-600">You miss orders when you're closed or busy serving in-store customers.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="w-8 h-8 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center flex-shrink-0 text-xl">📉</div>
+                        <div>
+                            <h4 class="font-semibold mb-1">Unprofessional image</h4>
+                            <p class="text-slate-600">Your business appears less serious compared to competitors with online shops.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-12">
+                <span class="px-4 py-1.5 bg-[#00c853] text-white text-sm font-medium rounded-3xl">The Solution</span>
+                <h2 class="text-3xl md:text-4xl font-semibold mt-6 mb-8 leading-tight">
+                    A clean online shop that sends every order straight to your WhatsApp
+                </h2>
+                <p class="text-lg text-slate-300">
+                    Customers browse your products, add what they want to cart, and send the complete order directly to your WhatsApp in seconds.
+                </p>
+                <ul class="mt-10 space-y-6 text-slate-200">
+                    <li class="flex items-start gap-4"><i class="fas fa-check-circle text-[#00c853] mt-1"></i> Your shop works 24 hours a day</li>
+                    <li class="flex items-start gap-4"><i class="fas fa-check-circle text-[#00c853] mt-1"></i> No technical skills required</li>
+                    <li class="flex items-start gap-4"><i class="fas fa-check-circle text-[#00c853] mt-1"></i> Built specifically for Kenyan businesses</li>
+                    <li class="flex items-start gap-4"><i class="fas fa-check-circle text-[#00c853] mt-1"></i> Ready in 3–4 days</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="max-w-screen-2xl mx-auto px-5 md:px-6 py-16 md:py-20 bg-slate-50">
+        <div class="text-center mb-12">
+            <span class="text-[#00c853] font-medium">Simple Process</span>
+            <h2 class="text-3xl md:text-4xl font-semibold mt-3">Get your shop ready in just 3–4 days</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+            <div class="bg-white rounded-3xl p-8 card-hover">
+                <div class="w-12 h-12 bg-[#00c853]/10 text-[#00c853] rounded-2xl flex items-center justify-center text-3xl mb-6">1️⃣</div>
+                <h3 class="font-semibold text-xl mb-3">Share your products</h3>
+                <p class="text-slate-600">Send us your product photos, names, and prices. We handle the rest.</p>
+            </div>
+            <div class="bg-white rounded-3xl p-8 card-hover">
+                <div class="w-12 h-12 bg-[#00c853]/10 text-[#00c853] rounded-2xl flex items-center justify-center text-3xl mb-6">2️⃣</div>
+                <h3 class="font-semibold text-xl mb-3">We build your shop</h3>
+                <p class="text-slate-600">We create a beautiful, mobile-friendly website and connect it to your WhatsApp.</p>
+            </div>
+            <div class="bg-white rounded-3xl p-8 card-hover">
+                <div class="w-12 h-12 bg-[#00c853]/10 text-[#00c853] rounded-2xl flex items-center justify-center text-3xl mb-6">3️⃣</div>
+                <h3 class="font-semibold text-xl mb-3">Start receiving orders</h3>
+                <p class="text-slate-600">Share your shop link (yourshop.netlify.app) everywhere. Orders come straight to your WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE DEMO -->
+    <section id="demo" class="max-w-screen-2xl mx-auto px-5 md:px-6 py-16 md:py-20 bg-white">
+        <div class="text-center max-w-xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-semibold mb-3">See how it works</h2>
+            <p class="text-lg text-slate-600">Try a real demo and experience how easy it is for customers to order</p>
+            
+            <div class="mt-12 bg-slate-900 rounded-3xl p-4 shadow-2xl">
+                <div class="aspect-video bg-black rounded-2xl overflow-hidden flex items-center justify-center relative">
+                    <div class="text-center text-white">
+                        <i onclick="this.parentElement.innerHTML = `<video controls autoplay class='w-full h-full rounded-2xl' src='YOUR_VIDEO_LINK_HERE.mp4'></video>`" 
+                           class="fas fa-play-circle text-8xl text-[#00c853] cursor-pointer hover:scale-110 transition-transform"></i>
+                        <p class="mt-6 text-lg font-medium">Click to watch demo video</p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="https://jotham-malumbe.github.io/Mama-Njeri-Res./" target="_blank"
+               class="mt-8 inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-3xl font-semibold hover:bg-black transition-colors">
+                Open Live Demo Shop
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- WHO IS IT FOR -->
+    <section id="for" class="max-w-screen-2xl mx-auto px-5 md:px-6 py-16 md:py-20 bg-slate-50">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-semibold">Perfect for local Kenyan businesses</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div class="bg-white rounded-3xl p-6 text-center card-hover">
+                <div class="text-5xl mb-4">🛒</div>
+                <h4 class="font-semibold">Small Shops &amp; Kiosks</h4>
+            </div>
+            <div class="bg-white rounded-3xl p-6 text-center card-hover">
+                <div class="text-5xl mb-4">🌾</div>
+                <h4 class="font-semibold">Farmers &amp; Produce</h4>
+            </div>
+            <div class="bg-white rounded-3xl p-6 text-center card-hover">
+                <div class="text-5xl mb-4">🍲</div>
+                <h4 class="font-semibold">Restaurants &amp; Eateries</h4>
+            </div>
+            <div class="bg-white rounded-3xl p-6 text-center card-hover">
+                <div class="text-5xl mb-4">👕</div>
+                <h4 class="font-semibold">Clothing Sellers</h4>
+            </div>
+            <div class="bg-white rounded-3xl p-6 text-center card-hover">
+                <div class="text-5xl mb-4">🧴</div>
+                <h4 class="font-semibold">Beauty Products</h4>
+            </div>
+            <div class="bg-white rounded-3xl p-6 text-center card-hover">
+                <div class="text-5xl mb-4">🛠️</div>
+                <h4 class="font-semibold">Artisans &amp; Handmade</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS + WHAT YOU GET -->
+    <section class="max-w-screen-2xl mx-auto px-5 md:px-6 py-16 md:py-20">
+        <div class="grid md:grid-cols-12 gap-12">
+            <div class="md:col-span-7">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-10">Benefits for your business</h2>
+                <div class="grid sm:grid-cols-2 gap-8">
+                    <div class="flex gap-5">
+                        <div class="text-4xl">📈</div>
+                        <div>
+                            <h4 class="font-semibold text-xl">More orders 24/7</h4>
+                            <p class="text-slate-600">Customers can shop even when your shop is closed.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="text-4xl">💰</div>
+                        <div>
+                            <h4 class="font-semibold text-xl">One-time payment</h4>
+                            <p class="text-slate-600">No monthly fees. Keep 100% of your profits.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="text-4xl">📱</div>
+                        <div>
+                            <h4 class="font-semibold text-xl">Fully mobile friendly</h4>
+                            <p class="text-slate-600">Designed for customers who shop on their phones.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="text-4xl">🚀</div>
+                        <div>
+                            <h4 class="font-semibold text-xl">Instant WhatsApp orders</h4>
+                            <p class="text-slate-600">Every order arrives directly in your WhatsApp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-5 bg-slate-900 text-white rounded-3xl p-8 md:p-10">
+                <h3 class="text-[#00c853] font-medium mb-2">What's Included</h3>
+                <h2 class="text-3xl font-semibold mb-8">Your complete WhatsApp order website</h2>
+                <ul class="space-y-5 text-slate-200">
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-[#00c853]"></i> Professionally designed online shop</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-[#00c853]"></i> All products uploaded by our team</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-[#00c853]"></i> Shopping cart with WhatsApp checkout</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-[#00c853]"></i> Free Netlify link (yourshop.netlify.app)</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-[#00c853]"></i> 30 days priority support &amp; training</li>
+                </ul>
+                <p class="text-xs text-slate-400 mt-10">Need updates later? Just contact us and we'll handle it professionally.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="max-w-screen-2xl mx-auto px-5 md:px-6 py-16 md:py-20 bg-[#00c853] text-white">
+        <div class="max-w-2xl mx-auto text-center">
+            <span class="bg-white text-[#00c853] px-6 py-2 rounded-3xl text-sm font-semibold">Special Offer</span>
+            <h2 class="text-4xl md:text-5xl font-semibold mt-8 mb-4">One Simple Package</h2>
+            <p class="text-xl md:text-2xl opacity-90">Everything you need to start getting orders on WhatsApp</p>
+            
+            <div class="mt-12 bg-white text-slate-900 rounded-3xl p-8 md:p-10 card-hover">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div>
+                        <span class="line-through text-slate-400 text-2xl">KSh 8,500</span>
+                        <h3 class="text-6xl font-semibold text-[#00c853]">KSh 5,500</h3>
+                        <p class="text-sm uppercase tracking-widest mt-1">One-time payment only</p>
+                    </div>
+                    <div class="bg-[#00c853] text-white px-6 py-2 rounded-2xl text-sm font-medium">Save KSh 3,000</div>
+                </div>
+                
+                <ul class="text-left space-y-5 my-12 text-slate-700">
+                    <li class="flex justify-between"><span>Custom online shop</span><span class="text-[#00c853]">✓</span></li>
+                    <li class="flex justify-between"><span>WhatsApp order integration</span><span class="text-[#00c853]">✓</span></li>
+                    <li class="flex justify-between"><span>Product upload by our team</span><span class="text-[#00c853]">✓</span></li>
+                    <li class="flex justify-between"><span>Free Netlify hosting</span><span class="text-[#00c853]">✓</span></li>
+                    <li class="flex justify-between"><span>30 days support &amp; training</span><span class="text-[#00c853]">✓</span></li>
+                </ul>
+                
+                <a href="https://wa.me/254115652612?text=Hi%20ChartCart%20Studio!%20I%27m%20ready%20to%20buy%20the%20WhatsApp%20order%20website%20at%20KSh%205500.%20Let%27s%20start!" 
+                   target="_blank"
+                   class="block w-full py-6 text-center bg-[#00c853] text-white text-2xl font-semibold rounded-3xl hover:bg-[#00b84a] transition-colors">
+                    Get my shop for KSh 5,500
+                </a>
+            </div>
+            
+            <p class="text-sm mt-8 opacity-75">Your shop will be live in 3–4 days. Easy payment via M-Pesa.</p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="bg-slate-900 text-white py-16 md:py-20">
+        <div class="max-w-screen-2xl mx-auto px-5 md:px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-semibold mb-6">Start receiving orders today</h2>
+            <p class="max-w-lg mx-auto text-lg md:text-xl opacity-90 mb-10">
+                Give your customers a simple way to browse and order from you. Your shop can be online in just a few days.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-5 justify-center">
+                <a href="https://wa.me/254115652612?text=Hi%20ChartCart%20Studio%2C%20I%20want%20to%20get%20my%20WhatsApp%20order%20website%20now!" 
+                   target="_blank"
+                   class="whatsapp-float flex items-center justify-center gap-4 bg-[#00c853] text-white text-xl font-semibold px-10 py-6 rounded-3xl hover:scale-105 transition-transform">
+                    <i class="fab fa-whatsapp text-3xl"></i>
+                    Message us on WhatsApp
+                </a>
+                
+                <a href="tel:0115652612" 
+                   class="flex items-center justify-center gap-4 border border-white/30 text-white text-xl font-semibold px-10 py-6 rounded-3xl hover:bg-white/10 transition-colors">
+                    <i class="fas fa-phone text-3xl"></i>
+                    <div>Call us: <span class="text-2xl font-medium">0115652612</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-screen-2xl mx-auto px-5 md:px-6 py-16 md:py-20 bg-white">
+        <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12">Frequently Asked Questions</h2>
+        <div class="max-w-3xl mx-auto space-y-4">
+            <details class="bg-white border border-slate-200 rounded-3xl p-8 group">
+                <summary class="flex justify-between items-center cursor-pointer font-medium text-lg">
+                    How long does it take to get my shop live?
+                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-6 text-slate-600">Your shop is usually ready within 3–4 days once we receive your product details and photos.</p>
+            </details>
+            <details class="bg-white border border-slate-200 rounded-3xl p-8 group">
+                <summary class="flex justify-between items-center cursor-pointer font-medium text-lg">
+                    Do I need to buy a domain?
+                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-6 text-slate-600">No. We provide a free professional link like yourshop.netlify.app at no extra cost.</p>
+            </details>
+            <details class="bg-white border border-slate-200 rounded-3xl p-8 group">
+                <summary class="flex justify-between items-center cursor-pointer font-medium text-lg">
+                    Can I update products later?
+                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-6 text-slate-600">We upload all your initial products. For future updates or additions, simply contact us on WhatsApp and we will handle them for you.</p>
+            </details>
+            <details class="bg-white border border-slate-200 rounded-3xl p-8 group">
+                <summary class="flex justify-between items-center cursor-pointer font-medium text-lg">
+                    Is there any monthly fee?
+                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-6 text-slate-600">No. You pay once and the shop is yours with no recurring charges.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- FINAL CLOSING CTA -->
+    <div class="bg-gradient-to-r from-[#00c853] to-[#00b84a] text-white py-16 md:py-20 text-center">
+        <div class="max-w-screen-2xl mx-auto px-5 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-semibold mb-4">Don’t lose customers to competitors</h2>
+            <p class="max-w-lg mx-auto text-xl mb-10">
+                Many people now prefer ordering online. Give them an easy and professional way to buy from you.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="https://wa.me/254115652612?text=Hi%20ChartCart%20Studio%2C%20I%20don%27t%20want%20to%20miss%20more%20orders.%20Let%27s%20build%20my%20shop%20today!" 
+                   target="_blank"
+                   class="whatsapp-float px-12 py-6 bg-white text-[#00c853] rounded-3xl font-semibold text-xl flex items-center justify-center gap-3 hover:shadow-xl transition-all">
+                    <i class="fab fa-whatsapp"></i>
+                    Get your shop today
+                </a>
+                
+                <a href="tel:0115652612" 
+                   class="px-12 py-6 border border-white text-white rounded-3xl font-semibold text-xl flex items-center justify-center gap-3 hover:bg-white/10 transition-all">
+                    <i class="fas fa-phone"></i>
+                    Call: 0115652612
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-300">
+        <div class="max-w-screen-2xl mx-auto px-5 md:px-6 py-12">
+            <div class="grid md:grid-cols-12 gap-8">
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-[#00c853] rounded-2xl flex items-center justify-center text-white text-2xl">🛒</div>
+                        <h1 class="heading-font text-3xl font-semibold text-white">ChartCart Studio</h1>
+                    </div>
+                    <p class="max-w-sm">Helping local Kenyan businesses sell online easily through simple WhatsApp order websites.</p>
+                    
+                    <div class="mt-10 flex items-center gap-8 text-sm">
+                        <a href="https://wa.me/254115652612" target="_blank" class="flex items-center gap-2 hover:text-white">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="tel:0115652612" class="flex items-center gap-2 hover:text-white">
+                            <i class="fas fa-phone"></i> 0115652612
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <p class="uppercase text-xs font-medium mb-4 text-slate-400">Quick Links</p>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#how" class="hover:text-white">How it Works</a></li>
+                        <li><a href="#demo" class="hover:text-white">Live Demo</a></li>
+                        <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <p class="uppercase text-xs font-medium mb-4 text-slate-400">Support</p>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://wa.me/254115652612" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:col-span-3 text-sm">
+                    <p class="text-slate-400">© 2026 ChartCart Studio</p>
+                    <p class="mt-6">Built with love for Kenya’s hardworking entrepreneurs ❤️</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('hamburgerIcon');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const menu = document.getElementById('mobileMenu');
+            const hamburgerBtn = document.querySelector('button[onclick="toggleMobileMenu()"]');
+            
+            if (!menu.contains(e.target) && !hamburgerBtn.contains(e.target) && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                const icon = document.getElementById('hamburgerIcon');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        console.log('%c✅ ChartCart Studio Landing Page Loaded Successfully', 'color:#00c853; font-weight:600');
+    </script>
+</body>
+</html>
